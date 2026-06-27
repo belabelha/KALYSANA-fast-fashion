@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Kalisana</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  :root {
+  /* Paleta de cores */
+  --cor-primaria: #60bb77;     
+  --cor-secundaria: #ff278c;   
+  --cor-acento: #e040b8;       
+  --cor-fundo: #fbfbf9;        
+  --cor-texto: #1c2816;        
+  --cor-texto-inv: #ffffff;    
+  --cor-alerta: #fff3cd;      
+  
+  /* Tipografia */
+  --fonte-titulo: 'Montserrat', sans-serif;
+  --fonte-corpo: 'Merriweather', serif;
+}
+
+header {
+  background-color: var(--cor-texto-inv);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+}
+
+h1, h2, h3 { 
+  font-family: var(--fonte-titulo); 
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; }
+
+p { margin-bottom: 1rem; }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--cor-fundo);
+    color:var(--cor-texto);
+    font-family:var(--fonte-corpo);
+    line-height:1.8;
+}
+
+header{
+    background:var(--cor-primaria);
+    color:var(--cor-fundo);
+    padding:25px;
+    text-align:center;
+}
+
+
+nav ul {
+  display: flex; 
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--cor-acento); }
+
+.logo h1{
+    font-family:var(--fonte-titulo);
+    font-size:3rem;
+    font-weight:900;
+}
+
+.logo p{
+    color:#d8e4d2;
+    margin-top:10px;
+}
+
+.hero{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px;
+    background:linear-gradient(
+        rgba(45,74,34,0.85),
+        rgba(45,74,34,0.85)
+    ),
+    url('https://images.unsplash.com/photo-1445205170230-053b83016050');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h2{
+    color:white;
+    font-family:var(--fonte-titulo);
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:white;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:var(--cor-acento);
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-family:var(--fonte-titulo);
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#b85715;
+}
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    font-family:var(--fonte-titulo);
+    color:var(--cor-primaria);
+    font-size:2.2rem;
+    margin-bottom:25px;
+}
+
+.nomes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.nome-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-left:5px solid var(--cor-acento);
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.nome-card h3{
+    font-family:var(--fonte-titulo);
+    color:var(--cor-secundaria);
+    font-size:2rem;
+}
+
+.alerta{
+    background:var(--cor-alerta);
+    border-left:8px solid var(--cor-acento);
+    padding:25px;
+    border-radius:8px;
+}
+
+footer{
+    background:var(--cor-primaria);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+<body>
+
+      <header>
+        <div class="logo">JORNAL KALISANA</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre nós</s></a></li>
+            <li><a href="tema.html">O Problema</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+        
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Desvendando a face oculta da moda</h2>
+            <p>
+                O Jornal Kalisana nasceu com a missão de informar, conscientizar e
+                revelar os impactos sociais, ambientais e humanos que muitas vezes
+                permanecem escondidos por trás das tendências da indústria da moda.
+            </p>
+
+            <a href="#sobre" class="btn">Conheça nossa história</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>O que significa Kalisana?</h2>
+
+        <p>
+            O nome <strong>Kalisana</strong> é formado pela união dos nomes de um grupo
+            de amigas que se conheceram na escola e decidiram transformar sua
+            curiosidade em informação:
+        </p>
+
+        <div class="nomes">
+            <div class="nome-card">
+                <h3>KA</h3>
+                <p>Karen</p>
+            </div>
+
+            <div class="nome-card">
+                <h3>LI</h3>
+                <p>Lisley e Lays</p>
+            </div>
+
+            <div class="nome-card">
+                <h3>SA</h3>
+                <p>Isabela</p>
+            </div>
+
+            <div class="nome-card">
+                <h3>NA</h3>
+                <p>Ana</p>
+            </div>
+        </div>
+
+        <p>
+            Mais do que um nome, Kalisana representa amizade, investigação e o
+            compromisso de levar informação de qualidade para quem deseja conhecer
+            a realidade por trás da moda rápida.
+        </p>
+    </section>
+
+    <section class="missao">
+        <h2>Nossa Missão</h2>
+
+        <div class="alerta">
+            <p>
+                A indústria da moda está entre as mais poluentes do mundo. Nosso
+                objetivo é apresentar dados, histórias e reportagens que ajudem o
+                público a compreender os impactos do Fast Fashion sobre o meio
+                ambiente e a sociedade.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>2026 Jornal Kalisana | Informação, Consciência e Transformação.</p>
+    </footer>
+
+</body>
+</html>
